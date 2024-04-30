@@ -6,4 +6,5 @@ public class Main {
         Demineur demineur = Demineur.create(15, 10);
         System.out.println(demineur.boardAsString());
     }
+
 }

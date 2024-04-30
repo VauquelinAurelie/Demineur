@@ -2,8 +2,6 @@ package campus.valence.demineur;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DemineurTest {
@@ -71,8 +69,8 @@ public class DemineurTest {
         // Given
         Demineur demineur = new Demineur(new Case[][]{
             new Case[]{new Case.ClearCase(0, 0), new Case.ClearCase(1, 0), new Case.ClearCase(2, 0),},
-            new Case[]{new Case.BombCase(0, 1), new Case.ClearCase(1, 1), new Case.ClearCase(2, 1),},
-            new Case[]{new Case.ClearCase(0, 2), new Case.ClearCase(1, 2), new Case.BombCase(2, 2),}
+            new Case[]{new BombCase(0, 1), new Case.ClearCase(1, 1), new Case.ClearCase(2, 1),},
+            new Case[]{new Case.ClearCase(0, 2), new Case.ClearCase(1, 2), new BombCase(2, 2),}
         });
 
         // When
@@ -87,8 +85,8 @@ public class DemineurTest {
         // Given
         Demineur demineur = new Demineur(new Case[][]{
                 new Case[]{new Case.ClearCase(0, 0), new Case.ClearCase(1, 0), new Case.ClearCase(2, 0),},
-                new Case[]{new Case.BombCase(0, 1), new Case.ClearCase(1, 1), new Case.ClearCase(2, 1),},
-                new Case[]{new Case.ClearCase(0, 2), new Case.ClearCase(1, 2), new Case.BombCase(2, 2),}
+                new Case[]{new BombCase(0, 1), new Case.ClearCase(1, 1), new Case.ClearCase(2, 1),},
+                new Case[]{new Case.ClearCase(0, 2), new Case.ClearCase(1, 2), new BombCase(2, 2),}
         });
 
         // When
@@ -106,7 +104,7 @@ public class DemineurTest {
         int count= 0;
         for (Case[] row: demineur.getBoard()) {
             for (Case oneCase: row) {
-                if (oneCase instanceof Case.BombCase) {
+                if (oneCase instanceof BombCase) {
                     count++;
                 }
             }

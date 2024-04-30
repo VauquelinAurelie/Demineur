@@ -1,7 +1,6 @@
 package campus.valence.demineur;
 
-public class BombCase {
-    static class BombCase extends Case {
+public class BombCase  extends Case {
         public BombCase(int x, int y) {
             super(x, y);
         }
@@ -10,5 +9,4 @@ public class BombCase {
         public String toString() {
             return "BOMB(" + x + ", " + y + ")";
         }
-    }
 }
