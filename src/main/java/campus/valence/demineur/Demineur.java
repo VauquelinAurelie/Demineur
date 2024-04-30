@@ -19,7 +19,6 @@ public class Demineur {
         //2) place the bombs
         Case[][] board = new Case[boardSize][boardSize];
         for (BombCase bomb : bombes) {
-//            System.out.println(bomb);
             board[bomb.x][bomb.y] = bomb;
         }
 
